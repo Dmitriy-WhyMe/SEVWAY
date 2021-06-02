@@ -1,0 +1,138 @@
+- var img = 'img/';
+
+doctype
+html
+	include blocks/head.pug
+		title
+	body
+		include blocks/header.pug
+
+		main.page-container
+			.baner
+				img(src=img+"002d2d7ead36759b4b6a4349983e6703-1 1.png", alt="" class="desc")
+				img(src=img+"002d2d7ead36759b4b6a4349983e6703 1.png", alt="" class="mob")
+				h1 Каршеринг — это SEVWAY
+				.mob-btns 
+					a(href="https://play.google.com/store?hl=ru&gl=US")
+						img(src=img+"google_play.png", alt="")
+					a(href="#")
+						img(src=img+"app_store.png", alt="")
+			.content
+				h2 Автопарк
+				.slider-for
+					.slide
+						.flex 
+							.text__car 
+								h2 Toyota Corolla1
+								h3 Поездка:<br>5 ₽/мин
+								p Стремительная, просторная, отлично оснащенная. Познакомьтесь с особенностями и преимуществами седана Toyota.
+							img(src=img+"Corolla-07 2.png", alt="")
+					.slide
+						.flex 
+							.text__car 
+								h2 Toyota Corolla2
+								h3 Поездка:<br>5 ₽/мин
+								p Стремительная, просторная, отлично оснащенная. Познакомьтесь с особенностями и преимуществами седана Toyota.
+							img(src=img+"Corolla-07 2.png", alt="")
+					.slide
+						.flex 
+							.text__car 
+								h2 Toyota Corolla3
+								h3 Поездка:<br>5 ₽/мин
+								p Стремительная, просторная, отлично оснащенная. Познакомьтесь с особенностями и преимуществами седана Toyota.
+							img(src=img+"Corolla-07 2.png", alt="")
+					.slide
+						.flex 
+							.text__car 
+								h2 Toyota Corolla4
+								h3 Поездка:<br>5 ₽/мин
+								p Стремительная, просторная, отлично оснащенная. Познакомьтесь с особенностями и преимуществами седана Toyota.
+							img(src=img+"Corolla-07 2.png", alt="")
+					.slide
+						.flex 
+							.text__car 
+								h2 Toyota Corolla5
+								h3 Поездка:<br>5 ₽/мин
+								p Стремительная, просторная, отлично оснащенная. Познакомьтесь с особенностями и преимуществами седана Toyota.
+							img(src=img+"Corolla-07 2.png", alt="")
+				.slider-nav
+					.slide
+						img(src=img+"Hyundai Solaris.png", alt="")
+						p Toyota Corolla
+					.slide
+						img(src=img+"Hyundai Solaris.png", alt="")
+						p Hyundai Solaris
+					.slide
+						img(src=img+"Hyundai Solaris.png", alt="")
+						p Škoda Rapid
+					.slide
+						img(src=img+"Hyundai Solaris.png", alt="")
+						p Kia Rio
+					.slide
+						img(src=img+"Hyundai Solaris.png", alt="")
+						p Lada Vesta
+			.content-mob 
+				.slider-mob__nav
+					a.arrow_prev
+						img(src=img+"next.svg", alt="")
+					a.arrow_next 
+						img(src=img+"next.svg", alt="")
+				.slider-mob 
+					.slider 
+						h3 Lada Vesta1
+						img(src=img+"Hyundai Solaris.png", alt="")
+						h3 5 ₽/мин
+						p Первый отечественный автомобиль, который может составить достойную конкуренцию иностранным авто класса В
+					.slider 
+						h3 Lada Vesta2
+						img(src=img+"Hyundai Solaris.png", alt="")
+						h3 5 ₽/мин
+						p Первый отечественный автомобиль, который может составить достойную конкуренцию иностранным авто класса В
+					.slider 
+						h3 Lada Vesta3
+						img(src=img+"Hyundai Solaris.png", alt="")
+						h3 5 ₽/мин
+						p Первый отечественный автомобиль, который может составить достойную конкуренцию иностранным авто класса В
+					.slider 
+						h3 Lada Vesta4
+						img(src=img+"Hyundai Solaris.png", alt="")
+						h3 5 ₽/мин
+						p Первый отечественный автомобиль, который может составить достойную конкуренцию иностранным авто класса В
+					.slider 
+						h3 Lada Vesta5
+						img(src=img+"Hyundai Solaris.png", alt="")
+						h3 5 ₽/мин
+						p Первый отечественный автомобиль, который может составить достойную конкуренцию иностранным авто класса В
+			.using 
+				h2 Как начать пользоваться
+				.flex 
+					img(src=img+"QR.png", alt="")
+					.using__block
+						p 1. Скачать приложение
+						p 2. Пройти регистрацию
+						p 3. Можно бронировать автомобиль
+					.using__block
+						a(href="https://play.google.com/store?hl=ru&gl=US") 
+							img(src=img+"Кнопка Google Play.png", alt="")
+						a(href="#") 
+							img(src=img+"Кнопка App Store.png", alt="")
+			.questions
+				h2 Есть вопросы?
+				a(href="tel+79781234567") +7(978)12-34-567
+				.flex
+					a(href="https://api.whatsapp.com/send/?phone=79787481453") 
+						img(src=img+"whatsapp_icon-icons 1.png", alt="")
+					a(href="https://msngr.link/vi/79787481453") 
+						img(src=img+"viber_94664 1.png", alt="")
+					a(href="https://tele.click/#") 
+						img(src=img+"telegram_icon-icons 1.png", alt="")
+			.dop-menu 
+				a(href="#") Главная
+				a(href="#") Автопарк
+				a(href="#") Тарифы
+				a(href="#") Зона покрытия
+				a(href="#") Служба поддержки
+			.contact 
+				h2 Контакты
+		include blocks/footer.pug
+		include blocks/scripts.pug

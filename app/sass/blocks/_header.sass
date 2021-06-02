@@ -1,0 +1,174 @@
+.header
+	display: flex
+	background: #3DC7BE
+	height: 82px
+	align-items: center
+.header
+    padding-left: 30px
+    padding-right: 30px
+    .header__logo
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 28px
+        line-height: 33px
+        color: white
+    .header__menu
+        margin-left: 135px
+.header__menu
+	nav
+		display: flex
+		ul
+			display: flex
+.main-menu-btn
+    display: none
+#main-menu-state
+    display: none
+.sm-clean
+    padding: 0
+    background: none
+    border-radius: 0px
+    a
+        font-family: 'Gilroy'
+        font-style: normal
+        font-weight: 600
+        font-size: 24px
+        line-height: 28px
+        color: white
+        &:hover
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 600
+            font-size: 24px
+            line-height: 28px
+            color: white
+        &:focus
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 600
+            font-size: 24px
+            line-height: 28px
+            color: white
+        &:active
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 600
+            font-size: 24px
+            line-height: 28px
+            color: white
+.active:after
+    content: ''
+    margin-top: 9px
+    display: block
+    height: 6px
+    width: 35px
+    margin: 9px auto 0px auto
+    background: #5B21BA
+    border-radius: 12px
+@include max-screen(1024px)
+    .main-menu-btn
+        display: block
+    .main-menu-btn-icon,
+    .main-menu-btn-icon:before,
+    .main-menu-btn-icon:after
+        display: block
+        position: absolute
+        top: 50%
+        left: 2px
+        height: 4px
+        width: 40px
+        background: white
+        -webkit-transition: all 0.25s
+        transition: all 0.25s
+    .main-menu-btn-icon:before
+        content: ''
+        top: -10px
+        left: 0
+    .main-menu-btn-icon:after
+        content: ''
+        top: 10px
+        left: 0
+    #main-menu-state:not(:checked) ~ #main-menu
+        display: none
+    #main-menu-state:checked ~ #main-menu
+        flex-direction: column
+        display: flex
+        width: 100%
+        max-width: 200px
+        background: #3DC7BE
+        position: fixed
+        left: 0
+        top: 82px
+        z-index: 99999
+        margin: 0
+        height: 100vh
+        transition: all .3s ease
+    #main-menu-state:checked ~ #main-menu li a
+        color: white
+    #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon
+        height: 0
+        background: white
+    #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before
+        transform: rotate(-45deg)
+        top: 0
+    #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after 
+        top: 0
+        transform: rotate(45deg)
+    .main-menu-btn 
+        float: right
+        margin: 6px 10px
+        position: relative
+        display: inline-block
+        width: 40px
+        height: 29px
+        text-indent: 29px
+        white-space: nowrap
+        overflow: hidden
+        cursor: pointer
+        font-size: 0px
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    #main-menu
+        justify-content: start
+        padding-top: 40px
+@include min-screen(768px)
+    .sm-clean
+        a
+            padding: 0px
+            padding-right: 100px
+            &:hover
+                padding: 0px
+                padding-right: 100px
+            &:active
+                padding: 0px
+                padding-right: 100px
+            &:focus
+                padding: 0px
+                padding-right: 100px
+    .sm-clean>li:last-child
+        a
+            padding-right: 0px
+
+@include max-screen(1300px)
+    .sm-clean
+        a
+            padding-right: 50px
+            &:hover
+                padding-right: 50px
+            &:active
+                padding-right: 50px
+            &:focus
+                padding-right: 50px
+@include max-screen(1024px)
+    #main-menu
+        padding-left: 10px
+    .sm-clean
+        a
+            padding-right: 0px
+            &:hover
+                padding-right: 0px
+            &:active
+                padding-right: 0px
+            &:focus
+                padding-right: 0px
+    .header
+        justify-content: space-between

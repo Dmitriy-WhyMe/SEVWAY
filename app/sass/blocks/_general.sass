@@ -1,0 +1,295 @@
+// main page elements
+body
+	font-size: 14px
+	color: #364857
+	font-family: 'Rockwell'
+	font-style: normal
+	font-weight: 400
+	background: white
+	overflow-x: hidden
+	// +scrollbar(10px, auto, $yellow, $gray2, $dark, null)
+
+.page-container
+	max-width: 1920px
+	width: 100%
+	margin: 0 auto
+	overflow: hidden
+
+.container
+	max-width: 1170px
+	width: 100%
+	padding: 0
+	margin: 0 auto
+	+mq($max-width: 1200px)
+		padding: 0 15px
+		max-width: 100%
+	+mq($max-width: 575px)
+		padding: 0 10px
+.flex
+	display: flex
+.mob, .contact, .mob-btns, .content-mob
+	display: none
+.dop-menu 
+	display: none
+.slider-for
+	.slick-track
+		display: flex
+.slider-nav
+	.slick-track
+		display: flex
+		.slide
+			cursor: pointer
+			p
+				max-width: 152px
+				display: flex
+				align-items: center
+				justify-content: center
+.slide
+	.text__car 
+		h2 
+			font-weight: normal
+			color: #334252
+			text-align: left
+			font-size: 42px
+			line-height: 49px
+			margin-bottom: 13px
+		h3
+			font-weight: normal
+			font-size: 32px
+			line-height: 38px
+			margin-bottom: 12px
+		p
+			font-size: 28px
+			line-height: 34px
+			max-width: 500px
+.content
+	padding-left: 200px
+	padding-right: 30px
+	margin-top: 25px
+	h2
+		text-align: center
+		color: #ff5722
+		font-weight: bold
+		font-size: 42px
+		line-height: 49px
+		padding-bottom: 17px
+.baner
+	position: relative
+	img
+		margin-top: -80px
+		width: 100%
+	h1
+		font-family: 'Rockwell'
+		font-style: normal
+		display: flex
+		justify-content: center
+		position: absolute
+		left: 0
+		bottom: 0
+		right: 0
+		top: 0
+		font-weight: 500
+		font-size: 48px
+		line-height: 56px
+		max-width: 400px
+		text-align: center
+		margin: 0 auto
+.using
+	margin-top: 56px
+	margin-bottom: 42px
+	padding-left: 150px
+	padding-right: 150px
+	h2
+		text-align: center
+		color: #ff5722
+		font-weight: bold
+		font-size: 42px
+		line-height: 49px
+		padding-bottom: 46px
+	.flex
+		justify-content: space-between
+		.using__block
+			display: flex
+			flex-direction: column
+			justify-content: space-evenly
+			p
+				font-size: 36px
+				line-height: 65px
+.questions
+	width: 375px
+	margin: 0 auto
+	display: flex
+	align-items: center
+	flex-direction: column
+	h2
+		text-align: center
+		color: #ff5722
+		font-weight: bold
+		font-size: 42px
+		line-height: 49px
+		padding-bottom: 26px
+	a
+		font-size: 34px
+		line-height: 40px
+		color: #364857
+		padding-bottom: 25px
+	.flex
+		width: 100%
+		justify-content: space-evenly
+@include max-screen(1024px)
+	.using
+		padding-left: 100px
+		padding-right: 100px
+	.using .flex .using__block p
+		line-height: 45px
+	.content
+		padding-left: 30px
+	.text__car
+		min-width: 315px
+	.baner img
+		margin-top: -25px
+@include max-screen(1023px)
+	.baner img
+		margin-top: 0px
+	.slide
+		.flex
+			flex-direction: column
+	.text__car
+		min-width: 100%
+	.slide .text__car p
+		max-width: 100%
+	.using
+		padding-left: 30px
+		padding-right: 30px
+	.using .flex .using__block p
+		font-size: 32px
+		line-height: 32px
+@include max-screen(767px)
+	.header
+		padding-left: 10px !important
+		padding-right: 10px !important
+	.mob
+		display: block
+	.desc
+		display: none
+	.baner h1
+		font-size: 35px
+		font-weight: 500
+		margin: 0
+		display: block
+		line-height: 33px
+		max-width: 280px
+		top: 15px
+		left: 10px
+	.using
+		display: none
+	.questions h2
+		margin-top: 20px
+		font-size: 24px
+		line-height: 28px
+		padding-bottom: 5px
+	.questions a
+		font-size: 20px
+		line-height: 23px
+		padding-bottom: 5px
+	.questions .flex
+		justify-content: center
+	.questions .flex > a > img
+		max-width: 32px
+		margin: 5px
+	.dop-menu 
+		margin-top: 30px
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		a
+			font-size: 18px
+			line-height: 21px
+			color: #364857
+			border-bottom: 1px solid #EDEDED
+			width: 100%
+			text-align: center
+			padding: 2px
+	.contact
+		display: block
+		h2
+			text-align: center
+			color: #ff5722
+			font-weight: bold
+			font-size: 24px
+			line-height: 28px
+			padding-top: 25px
+			padding-bottom: 5px
+	.mob-btns 
+		display: flex
+		position: absolute
+		bottom: 5px
+		left: 0
+		right: 0
+		margin: 0 auto
+		justify-content: center
+		max-width: 300px
+		width: 100%
+		a
+			margin: 5px
+	.content
+		display: none
+	.content-mob
+		display: block
+		position: relative
+	.slider-mob
+		position: relative
+		z-index: 1
+	.slider-mob__nav
+		position: absolute
+		width: 230px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		top: -25px
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 2
+		margin: 0 auto
+		.arrow_prev
+			img
+				transform: rotate(180deg)
+		a
+			width: 36px
+			height: 36px
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 100%
+			background: #E5E5E5
+			img
+				max-width: 13px
+				max-height: 16px
+	.slider-mob
+		.slick-track
+			display: flex
+			.slider
+				padding-top: 20px
+				display: flex
+				align-items: center
+				flex-direction: column
+				h3
+					font-weight: 500
+					text-align: center
+					font-size: 18px
+					line-height: 21px
+				p
+					padding-top: 20px
+					font-size: 14px
+					line-height: 17px
+					text-align: center
+					max-width: 330px
+				img
+					max-width: 205px
+@include max-screen(413px)
+	.baner h1
+		line-height: 40px
+	.questions
+		width: 100%
